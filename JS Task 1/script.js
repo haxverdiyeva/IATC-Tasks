@@ -162,11 +162,55 @@
 // output: HelloWorld
 // example: a man who thinks about the end, can not be a hero
 
+// this code works only for hello world
+// phrase = "hello world";
+// result = '';
+
+// for (let i = 0; i < phrase.length; i++) {
+//     if (phrase[i] != ' ') {
+//         if (i == 0 || i == 6) {
+//             result += phrase[i].toUpperCase();
+//         } else {
+//             result += phrase[i];
+//         }
+//     }
+// }
+
+// console.log(result);
+
+
+// phrase = "hello world";
+// phrase = phrase.split(" ");
+
+// for (let i = 0; i < phrase.length; i++) {
+//   phrase[i] = phrase[i][0].toUpperCase() + phrase[i].substr(1);
+// }
+
+// console.log(phrase.join(""));
+
+
 // 9. Write a JavaScript program to remove duplicate characters from a string.
 // example: hello world
 // output: helo wrd
 // example: javascript is bomba
 // example: a man who thinks about the end, can not be a hero
+
+
+// let example5 = "hello world";
+// let result5 = '';
+// let charArr = [];
+
+// for (let i = 0; i < example5.length; i++) {
+//   let char = example5[i];
+
+//   if (!charArr.includes(char)) {
+//     result5 += char;
+//     charArr.push(char);
+//   };
+// };
+
+// console.log(result5);
+
 
 // 10. Write a JavaScript program to convert a string into camel case.
 // example: hello world
@@ -174,10 +218,39 @@
 // example: javascript is bomba
 // example: a man who thinks about the end, can not be a hero
 
+
+// phrase = "hello world";
+// phrase = phrase.split(" ");
+
+// for (let i = 0; i < phrase.length; i++) {
+//     if (i == 0) {
+//         phrase[0] = phrase[0][0].toLowerCase() + phrase[0].substr(1);
+//     } else {
+//         phrase[i] = phrase[i][0].toUpperCase() + phrase[i].substr(1);
+//     }
+// }
+
+// console.log(phrase.join(""));
+
 // 11. Write a JavaScript program to convert a string into snake case.
 // example: hello world
 // output: hello_world
 // example: a man who thinks about the end, can not be a hero
+
+
+// var phrase = "hello world";
+// var result7 = '';
+
+// for (let i = 0; i < phrase.length; i++) {
+//   if (phrase[i] === ' ') {
+//     result7 += '_';
+//   } else {
+//     result7 += phrase[i];
+//   }
+// }
+
+// console.log(result7);
+
 
 // 12. Write a JavaScript program to convert a string into kebab case.
 // example: hello world
@@ -185,19 +258,95 @@
 // example: a man who thinks about the end, can not be a hero
 // example: javascript is bomba
 
+
+// var phrase = "hello world";
+// var result7 = '';
+
+// for (let i = 0; i < phrase.length; i++) {
+//   if (phrase[i] === ' ') {
+//     result7 += '-';
+//   } else {
+//     result7 += phrase[i];
+//   }
+// }
+
+// console.log(result7);
+
+
 // 13. Write a JavaScript program to check if a given string is a palindrome.
 // palindromes: madam, civic, radar, level, rotor, kayak, reviver, racecar, redder, madam, refer
 // example: hello world // false
 // example: madam // true
 // example: racecar // true
 
+
+// function isPalindrome(str) {
+//     var len = str.length;
+//     var middle = Math.floor(len / 2);
+  
+//     for (let i = 0; i < middle; i++) {
+//       if (str[i] !== str[len - 1 - i]) {
+//         return false;
+//       }
+//     }
+  
+//     return true;
+//   }
+  
+//   var str1 = "hello world";
+//   console.log(isPalindrome(str1));
+  
+//   var str2 = "madam";
+//   console.log(isPalindrome(str2));
+  
+//   var str3 = "racecar";
+//   console.log(isPalindrome(str3));
+
+
 // 14. Write a JavaScript program to check if a given string is a pangram.
 // pangram: a sentence containing every letter in the English alphabet.
 // example: The quick brown fox jumps over the lazy dog. // true
 // example: The quick brown fox jumps over the dog. // false
+
+
+// function isPangram(str) {
+//     const regex = /([a-z])(?!.*\1)/gi;
+//     return (str.toLowerCase().match(regex) || []).length === 26;
+//   }
+  
+//   var str1 = "The quick brown fox jumps over the lazy dog.";
+//   console.log(isPangram(str1)); // Output: true
+  
+//   var str2 = "The quick brown fox jumps over the dog.";
+//   console.log(isPangram(str2)); // Output: false
+
 
 // 15. Write a JavaScript program to check if a given string is a anagram.
 // anagram: a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
 // example: cinema // iceman // true
 // example: listen // silent // true
 // example: hello // world // false
+
+
+// function isAnagram(str1, str2) {
+//     var sortedStrFirst = str1.toLowerCase().split('').sort().join('');
+//     var sortedStrSecond = str2.toLowerCase().split('').sort().join('');
+  
+//     if (sortedStrFirst === sortedStrSecond) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+  
+// var str1 = "cinema";
+// var str2 = "iceman";
+// console.log(isAnagram(str1, str2))
+  
+// var str3 = "listen";
+// var str4 = "silent";
+// console.log(isAnagram(str3, str4));
+
+// var str5 = "hello";
+// var str6 = "world";
+// console.log(isAnagram(str5, str6));
