@@ -1,0 +1,68 @@
+body { 
+  font-family: 'Poppins', sans-serif;
+  margin: 0; 
+  padding: 0;
+}
+  .wrapper{
+    background-color: rgb(213, 213, 213);
+    width: 600px;
+    height: 450px;
+    border-radius: 24px;
+    border-bottom-right-radius: 148px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; 
+    display: flex; 
+  }
+   
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-columns: auto;
+    grid-template-columns: auto;
+    gap: 40px;
+  }
+  .grid1{
+    grid-column: 1/2;
+   
+  }
+  .grid2{
+    grid-column: 2/3;
+   
+  }
+  .grid3{
+    grid-column: 3/4;
+   
+  }
+  button { 
+    padding: 0.5rem 1rem; 
+    background-color: hsl(259, 100%, 65%);
+    color: #fff; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+  } 
+
+input {
+ border-radius: 8px;
+ border-color: rgba(0, 0, 0, 0.324);
+ width: 120px;
+ height: 50px;
+}
+label {
+  color: hsl(0, 1%, 44%);
+  font-size: small;
+  font-family: 'Poppins', sans-serif;
+}
+
+.buttonimg{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 24px;
+}
+  button:hover { 
+    background-color: #000000; 
+  }
